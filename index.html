@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap基礎</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container" style="background: skyblue;">コンテナ</div>
+    <div class="container-fluid" style="background: pink;">コンテナ流動幅</div>
+
+
+    <div class="cotainer">
+        <div class="row">
+            <!--  "col-sm-6"の意味　ブレイクポイントのsm=567以上のときは６カラム分使うという意味で567未満のスマホサイズになると全幅表示になる。 -->
+            <!--今回２つの要素を用意してそれぞれに6カラムずつで合計12カラムで使っているので、567未満のスマホサイズになると全幅表示になって列の横並びからで行の縦並びになる。-->
+           <div class="col-sm-6" style="border: 1px solid #000;">1</div>
+           <div class="col-sm-6" style="border: 1px solid #000;">2</div> 
+
+           <!-- 折り返しと余白 -->
+           <div class="cotainer">
+            <div class="row gx-0 gy-5"> <!-- 余白 -->
+                <!-- 折り返し -->
+                <div class="col-md-6 col-lg-3">1</div>
+                <div class="col-md-6 col-lg-3">2</div>
+                <div class="col-md-6 col-lg-3">3</div>
+                <div class="col-md-6 col-lg-3">4</div>
+            </div>
+
+
+            <!-- flexの応用 -->
+            <div class="cotainer">
+                <div class="row flex-row-revere justfy-content-lg-center"> <!-- だいたいここに書く classの中に追加で書く  -->
+                    <!-- 並び替えの指定 -->
+                    <div class="col-md-2 order-last">1</div><!-- 最後に -->
+                    <div class="col-md-2 order-first">2</div><!-- 最初に -->
+                    <div class="col-md-2 order-2">3</div><!-- ２番手に -->
+                </div> 
+            </div>
+           </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

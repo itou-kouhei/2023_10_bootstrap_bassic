@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サンプルサイト</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <!-- カード作成 -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-lg-3">
+            <div class="card">
+                <img src="https://picsum.photos/id/572/400/300" alt="" class="card-img-top">
+                 <div class="card-body"> <!-- カードのテキストの枠ができる -->
+                  <h3 class="h5 card-tittle">私のカメラで撮った写真</h3> <!-- class="h5はタイトルの大きさでcard-tittleはタイトルの余白-->
+                  <p class="card-text"> <!-- テキストの下に別の要素が入ってきたら余白をできる。入ってこない場合は余白は作らないように設定されている。 -->
+                    ダミー文章です。ダミー文章です。ダミー文章です。
+                  </p> 
+                  <a href="#" class="btn btn-outline-primary">more</a> <!-- btnはボタンの枠組みでbtn-outline-primaryはボタンのスタイル-->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mt-3 mt-md-0"> <!-- mt-3は余白の指定でmargin top-3ということ。その次のmt-md-0はmdの画面サイズの時は余白なしということ--> 
+               <div class="card">
+                <img src="https://picsum.photos/id/693/400/300" alt="" class="card-img-top">
+                 <div class="card-body"> 
+                  <h3 class="h5 card-tittle">私のカメラで撮った写真</h3> 
+                  <p class="card-text">
+                    ダミー文章です。ダミー文章です。ダミー文章です。
+                  </p> 
+                  <a href="#" class="btn btn-outline-primary">more</a> 
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mt-3 mt-lg-0"> 
+               <div class="card">
+                <img src="https://picsum.photos/id/411/400/300" alt="" class="card-img-top">
+                 <div class="card-body"> 
+                  <h3 class="h5 card-tittle">私のカメラで撮った写真</h3>
+                  <p class="card-text"> 
+                    ダミー文章です。ダミー文章です。ダミー文章です。
+                  </p> 
+                  <a href="#" class="btn btn-outline-primary">more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mt-3 mt-lg-0"> 
+               <div class="card">
+                <img src="https://picsum.photos/id/378/400/300" alt="" class="card-img-top">
+                 <div class="card-body">
+                  <h3 class="h5 card-tittle">私のカメラで撮った写真</h3>
+                  <p class="card-text">
+                    ダミー文章です。ダミー文章です。ダミー文章です。
+                  </p> 
+                  <a href="#" class="btn btn-outline-primary">more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- My Profile 切り替えタブのようなものを作成 -->
+<section class="container">
+<h2 class="display-4 text-center my-5">My Profile</h2>
+<nav class="nav justify-content-center nav-pills"> <!-- nav-pillsがタグのスタイルを作成 -->
+    <!-- data-bs-toggle="tab"はJavaScriptの記述 -->
+    <a href="#profile" class="nav-link active" data-bs-toggle="tab">自己紹介</a> <!-- activeを入れることタグの形を作成される -->
+    <a href="#skill" class="nav-link" data-bs-toggle="tab">スキル</a>
+    <a href="#works" class="nav-link" data-bs-toggle="tab">作品集</a>
+    <a href="#history" class="nav-link" data-bs-toggle="tab">経歴</a>
+</nav>
+<!-- JavaScriptの記述 -->
+<div class="tab-content py-5">
+    <h3>自己紹介</h3>
+    <!-- id="Profile"で上の <a href="#profile"と紐付けするころでタブを押すとそのテキストが表示される -->
+    <div class="tab-pane fade show active" id="Profile"> <!-- fadeはタブを押した時のアニメーション。show activeはこの項目を一番最初に表示させる.
+     -->
+        <p>ダミー文章ダミー文章ダミー文章</p>
+    </div>
+    <div class="tab-pane fade" id="skill">
+        <h3>スキル</h3>
+        <p>ダミー文章ダミー文章ダミー文章</p>
+    </div>
+    <div class="tab-pane fade" id="works">
+        <h3>作品集</h3>
+        <p>ダミー文章ダミー文章ダミー文章</p>
+    </div>
+    <div class="tab-pane fade" id="history">
+        <h3>経歴</h3>
+        <p>ダミー文章ダミー文章ダミー文章</p>
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
