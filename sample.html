@@ -1,110 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>サンプルサイト</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+
+    <!-- ナビゲーション -->
+    <!--  classの解説 -->
+    <!-- class="navber"を入れるとheaderのナビゲーションが作成される。bg-lightは背景の色。-->
+    <!-- navbar-expand-mdのnavbar-expandはexpandとは拡張といういみなので３本線に折り畳まれすにすべて見せるという事。あとは-mdでそれをどこのブレイクポイントで行うかを入れる-md入れる -->
+
+    <!-- <nav class="navber bg-light navbar-expand-md position-fixed top-0 z-1 w-100"></nav> -->
+    <!-- position-fixed top-0で画面上部に固定 固定はできたが下の要素も上部に上がってきて後ろに隠れている状態。-->
+    <!-- z-1で後ろに隠れていたのを要素の一番前に浮かせる。-->
+    <!-- w-100で画面幅いっぱいにする。position-fixedをかけた時点で要素の幅はコンテンツ内容に合うようになるのでそれを改善-->
+    <!-- 上部のposition-fixed top-0 z-1 w-100一覧の流れを新しくでたfixed-topで解決できる -->
+    <nav class="navber bg-light navbar-expand-md fixed-top">
+        <!-- メインビジュアル -->
+        <div class="p-5 my-5 bg-primary-subtle rounded-3">
+<div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Main Visual</h1>
+    <p class="w-75 fs-4">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <button class="btn btn-primary btn-lg">ボタンテキスト</button>
+</div>
+        </div>
+      <div class="container"><!-- containerを入れた時点で画面の左右に余白ができる -->
+        <a href="#" class="navber-brand">Personal Blog</a><!-- navber-brandはロゴ -->
+        <!-- dataの部分はボタンクリックした時にナビゲーション開閉する -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- ３本線の制御 -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- ナビゲーション(項目の部分) -->
+        <div class="collapse navbar-collapse" id="global-nav">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Profile</a>
+            <a href="#" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
     <!-- カード作成 -->
-<div class="container">
-    <div class="row">
+    <div class="container">
+      <div class="row">
         <div class="col-md-6 col-lg-3">
-            <div class="card">
-                <img src="https://picsum.photos/id/572/400/300" alt="" class="card-img-top">
-                 <div class="card-body"> <!-- カードのテキストの枠ができる -->
-                  <h3 class="h5 card-tittle">私のカメラで撮った写真</h3> <!-- class="h5はタイトルの大きさでcard-tittleはタイトルの余白-->
-                  <p class="card-text"> <!-- テキストの下に別の要素が入ってきたら余白をできる。入ってこない場合は余白は作らないように設定されている。 -->
-                    ダミー文章です。ダミー文章です。ダミー文章です。
-                  </p> 
-                  <a href="#" class="btn btn-outline-primary">more</a> <!-- btnはボタンの枠組みでbtn-outline-primaryはボタンのスタイル-->
-                </div>
+          <div class="card">
+            <img
+              src="https://picsum.photos/id/572/400/300"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <!-- カードのテキストの枠ができる -->
+              <h3 class="h5 card-tittle">私のカメラで撮った写真</h3>
+              <!-- class="h5はタイトルの大きさでcard-tittleはタイトルの余白-->
+              <p class="card-text">
+                <!-- テキストの下に別の要素が入ってきたら余白をできる。入ってこない場合は余白は作らないように設定されている。 -->
+                ダミー文章です。ダミー文章です。ダミー文章です。
+              </p>
+              <a href="#" class="btn btn-outline-primary">more</a>
+              <!-- btnはボタンの枠組みでbtn-outline-primaryはボタンのスタイル-->
             </div>
+          </div>
         </div>
-        <div class="col-md-6 col-lg-3 mt-3 mt-md-0"> <!-- mt-3は余白の指定でmargin top-3ということ。その次のmt-md-0はmdの画面サイズの時は余白なしということ--> 
-               <div class="card">
-                <img src="https://picsum.photos/id/693/400/300" alt="" class="card-img-top">
-                 <div class="card-body"> 
-                  <h3 class="h5 card-tittle">私のカメラで撮った写真</h3> 
-                  <p class="card-text">
-                    ダミー文章です。ダミー文章です。ダミー文章です。
-                  </p> 
-                  <a href="#" class="btn btn-outline-primary">more</a> 
-                </div>
+        <div class="col-md-6 col-lg-3 mt-3 mt-md-0">
+          <!-- mt-3は余白の指定でmargin top-3ということ。その次のmt-md-0はmdの画面サイズの時は余白なしということ-->
+          <div class="card">
+            <img
+              src="https://picsum.photos/id/693/400/300"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h3 class="h5 card-tittle">私のカメラで撮った写真</h3>
+              <p class="card-text">
+                ダミー文章です。ダミー文章です。ダミー文章です。
+              </p>
+              <a href="#" class="btn btn-outline-primary">more</a>
             </div>
+          </div>
         </div>
-        <div class="col-md-6 col-lg-3 mt-3 mt-lg-0"> 
-               <div class="card">
-                <img src="https://picsum.photos/id/411/400/300" alt="" class="card-img-top">
-                 <div class="card-body"> 
-                  <h3 class="h5 card-tittle">私のカメラで撮った写真</h3>
-                  <p class="card-text"> 
-                    ダミー文章です。ダミー文章です。ダミー文章です。
-                  </p> 
-                  <a href="#" class="btn btn-outline-primary">more</a>
-                </div>
+        <div class="col-md-6 col-lg-3 mt-3 mt-lg-0">
+          <div class="card">
+            <img
+              src="https://picsum.photos/id/411/400/300"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h3 class="h5 card-tittle">私のカメラで撮った写真</h3>
+              <p class="card-text">
+                ダミー文章です。ダミー文章です。ダミー文章です。
+              </p>
+              <a href="#" class="btn btn-outline-primary">more</a>
             </div>
+          </div>
         </div>
-        <div class="col-md-6 col-lg-3 mt-3 mt-lg-0"> 
-               <div class="card">
-                <img src="https://picsum.photos/id/378/400/300" alt="" class="card-img-top">
-                 <div class="card-body">
-                  <h3 class="h5 card-tittle">私のカメラで撮った写真</h3>
-                  <p class="card-text">
-                    ダミー文章です。ダミー文章です。ダミー文章です。
-                  </p> 
-                  <a href="#" class="btn btn-outline-primary">more</a>
-                </div>
+        <div class="col-md-6 col-lg-3 mt-3 mt-lg-0">
+          <div class="card">
+            <img
+              src="https://picsum.photos/id/378/400/300"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h3 class="h5 card-tittle">私のカメラで撮った写真</h3>
+              <p class="card-text">
+                ダミー文章です。ダミー文章です。ダミー文章です。
+              </p>
+              <a href="#" class="btn btn-outline-primary">more</a>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-<!-- My Profile 切り替えタブのようなものを作成 -->
-<section class="container">
-<h2 class="display-4 text-center my-5">My Profile</h2>
-<nav class="nav justify-content-center nav-pills"> <!-- nav-pillsがタグのスタイルを作成 -->
-    <!-- data-bs-toggle="tab"はJavaScriptの記述 -->
-    <a href="#profile" class="nav-link active" data-bs-toggle="tab">自己紹介</a> <!-- activeを入れることタグの形を作成される -->
-    <a href="#skill" class="nav-link" data-bs-toggle="tab">スキル</a>
-    <a href="#works" class="nav-link" data-bs-toggle="tab">作品集</a>
-    <a href="#history" class="nav-link" data-bs-toggle="tab">経歴</a>
-</nav>
-<!-- JavaScriptの記述 -->
-<div class="tab-content py-5">
-    <h3>自己紹介</h3>
-    <!-- id="Profile"で上の <a href="#profile"と紐付けするころでタブを押すとそのテキストが表示される -->
-    <div class="tab-pane fade show active" id="Profile"> <!-- fadeはタブを押した時のアニメーション。show activeはこの項目を一番最初に表示させる.
+    <!-- My Profile 切り替えタブのようなものを作成 -->
+    <section class="container">
+      <h2 class="display-4 text-center my-5">My Profile</h2>
+      <nav class="nav justify-content-center nav-pills">
+        <!-- nav-pillsがタグのスタイルを作成 -->
+        <!-- data-bs-toggle="tab"はJavaScriptの記述 -->
+        <!-- activeを入れることタグの形を作成される -->
+        <!-- aria-selected="true or false"を入れるとサイトでは何を表示しているかをコンピュータの裏で表す。 -->
+        <a
+          href="#profile"
+          class="nav-link active"
+          data-bs-toggle="tab"
+          aria-selected="true"
+          >自己紹介</a
+        >
+        <a
+          href="#skill"
+          class="nav-link"
+          data-bs-toggle="tab"
+          aria-selected="false"
+          >スキル</a
+        >
+        <a
+          href="#works"
+          class="nav-link"
+          data-bs-toggle="tab"
+          aria-selected="false"
+          >作品集</a
+        >
+        <a
+          href="#history"
+          class="nav-link"
+          data-bs-toggle="tab"
+          aria-selected="false"
+          >経歴</a
+        >
+      </nav>
+      <!-- JavaScriptの記述 -->
+      <div class="tab-content py-5">
+        <h3>自己紹介</h3>
+        <!-- id="Profile"で上の <a href="#profile"と紐付けするころでタブを押すとそのテキストが表示される -->
+        <div class="tab-pane fade show active" id="Profile">
+          <!-- fadeはタブを押した時のアニメーション。show activeはこの項目を一番最初に表示させる.
      -->
-        <p>ダミー文章ダミー文章ダミー文章</p>
-    </div>
-    <div class="tab-pane fade" id="skill">
-        <h3>スキル</h3>
-        <p>ダミー文章ダミー文章ダミー文章</p>
-    </div>
-    <div class="tab-pane fade" id="works">
-        <h3>作品集</h3>
-        <p>ダミー文章ダミー文章ダミー文章</p>
-    </div>
-    <div class="tab-pane fade" id="history">
-        <h3>経歴</h3>
-        <p>ダミー文章ダミー文章ダミー文章</p>
-    </div>
-</div>
-</section>
+          <p>ダミー文章ダミー文章ダミー文章</p>
+        </div>
+        <div class="tab-pane fade" id="skill">
+          <h3>スキル</h3>
+          <p>ダミー文章ダミー文章ダミー文章</p>
+        </div>
+        <div class="tab-pane fade" id="works">
+          <h3>作品集</h3>
+          <p>ダミー文章ダミー文章ダミー文章</p>
+        </div>
+        <div class="tab-pane fade" id="history">
+          <h3>経歴</h3>
+          <p>ダミー文章ダミー文章ダミー文章</p>
+        </div>
+      </div>
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-    
     <script src="js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
